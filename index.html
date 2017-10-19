@@ -1,0 +1,25 @@
+---
+title: openDiary
+---
+<head>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+      <div class="container">
+        <h1>opendiary</h1>
+        <h2></h2>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h3> Posts </h3>
+        <ul class="posts">
+          {% for post in site.posts %}
+            <li> <a href="{{ post.url }}">{{ post.date | date_to_string }}</a> </li>
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
+</body>
